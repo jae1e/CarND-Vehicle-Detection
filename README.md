@@ -27,9 +27,11 @@ Binned image feature, color histogram feature, and HOG feature were extracted fr
 Sliding window search
 ---
 
-* Window construction
+Search windows were built by applying a few conditions. First, search range was restricted to avoid search vehicles out of the road. Second, overlap ratio of the window was `0.5` for both X and Y directions. Third, 4 window sizes were used: `(64, 64)`, `(86, 86)`, `(108, 108)` and `(128, 128)`. Cropped images from each window were resized to `(64, 64)`, which is the size of training data image, and SVM classifier predicted whether the image is a car or not. The image below is an example of the sliding window search.
 
-* Heat map
+* Sliding window search image
+
+After the search, a heat map was generated to combine overlapped search result into a single box. Windows were marked on the heat map and threshold value was applied to reduce false positive. Here is an example of the heat map.
 
 * Reduce false positive
 
