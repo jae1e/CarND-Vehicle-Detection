@@ -17,7 +17,8 @@ The goals / steps of this project are the following:
 Feature extraction
 ---
 
-For the training, three features were used: binned image feature, color histogram feature and HOG feature. First, an RGB image was converted to YCrCB image. Then binned image and color histogram features extracted. Also, HOG feature extraction was performed using all channels of YCrCb image, which showed good performance in the HOG feature extraction. The image below shows the result of HOG feature extraction.
+For the training, three features were used: binned image feature, color histogram feature and HOG feature. First, an RGB image was converted to YCrCB image. Then binned image and color histogram features extracted. 
+Also, HOG feature extraction was performed using all channels of YCrCb image, by which good performance was obtained in the HOG feature extraction. The image below shows the result of HOG feature extraction.
 
 <p align="center">
   <img src="./output_images/hog_features.png" width="700">
