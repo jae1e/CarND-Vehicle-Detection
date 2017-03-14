@@ -18,6 +18,7 @@ Feature extraction
 ---
 
 For the training, three features were used: binned image feature, color histogram feature and HOG feature. First, an RGB image was converted to YCrCB image. Then binned image and color histogram features extracted. 
+
 Also, HOG feature extraction was performed using all channels of YCrCb image, by which good performance was obtained in the HOG feature extraction. The image below shows the result of HOG feature extraction.
 
 <p align="center">
@@ -28,7 +29,7 @@ Also, HOG feature extraction was performed using all channels of YCrCb image, by
 Training Support Vector Machine (SVM)
 ---
 
-Binned image feature, color histogram feature, and HOG feature were extracted from the single image and then combined into one matrix as a feature for SVM. With `vehicle` and `non-vehicle` data set, training was performed using `LinearSVC` class from SKLearn. The numbers of the images of the training set were 8792 and 8968, respectively. Two data sets were merged into one, and 20% of the total data set was split for test set. Trained classifier showed 0.9882 of accuracy.
+Binned image feature, color histogram feature, and HOG feature were extracted from the single image and combined into one matrix as a input feature for SVM. With `vehicle` and `non-vehicle` data set, training was performed using `LinearSVC` class from SKLearn. The numbers of the images of the training set were 8792 and 8968, respectively. Two data sets were merged into one, and 20% of the total data set was split for test set. Trained classifier showed 0.9882 of accuracy.
 
 
 Sliding window search
