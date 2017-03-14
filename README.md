@@ -61,4 +61,5 @@ Here are the result videos using the vehicle detection pipeline. In the second v
 Discussion
 ---
 
+Comparing two videos, the second video in which false positive reduction was applied showed more stable result. This is because previous frame's windows could be reliable source and enabled higher heat map threshold which led reuction of false positive detection. However, I can see false positive in the video yet though it rarely appears. Also, my pipeline was struggled when the size of the car is very small or large. I tried to minimize the variation of window size to reduce calculation time, and it might be the reason. The more variety of window size and higher heat map threshold can make better result, but it also increases the calculation time significantly. Alternatively, I think applying deep neural network can be good solution. Deep neural network classifier might give better result than SVM, and it is more easy to utilize GPU power with DNN classifier which can increase the speed of calculation.
 
