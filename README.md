@@ -53,9 +53,9 @@ Result video
 
 Here are the result videos using the vehicle detection pipeline. In the second video, false positive reduction using the windows of previous frame was applied.
 
-* [Project video 1](https://youtu.be/br-fN8EgXPk)
+* [Project video 1](https://youtu.be/dYgyZRtGRCU)
 
-* [Project video 2 (False positive reduction)](https://youtu.be/br-fN8EgXPk)
+* [Project video 2 (False positive reduction)](https://youtu.be/NbLypwze8Xo)
 
 
 Discussion
