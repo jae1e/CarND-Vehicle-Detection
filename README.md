@@ -1,5 +1,9 @@
 # Vehicle Detection
 
+<p align="center">
+  <img src="./output_images/main.png" width="600">
+</p>
+
 The goals / steps of this project are the following:
 
 * Perform a Histogram of Oriented Gradients (HOG) feature extraction on a labeled training set of images and train a classifier Linear SVM classifier
@@ -15,7 +19,9 @@ Feature extraction
 
 For the training, three features were used: binned image feature, color histogram feature and HOG feature. First, an RGB image was converted to YCrCB image. Then binned image and color histogram features extracted. Also, HOG feature extraction was performed using all channels of YCrCb image, which showed good performance in the HOG feature extraction. The image below shows the result of HOG feature extraction.
 
-* HOG feature extraction image
+<p align="center">
+  <img src="./output_images/hog_features.png" width="800">
+</p>
 
 
 Training Support Vector Machine (SVM)
@@ -29,18 +35,27 @@ Sliding window search
 
 Search windows were built by applying a few conditions. First, search range was restricted to avoid search vehicles out of the road. Second, overlap ratio of the window was `0.5` for both X and Y directions. Third, 4 window sizes were used: `(64, 64)`, `(86, 86)`, `(108, 108)` and `(128, 128)`. Cropped images from each window were resized to `(64, 64)`, which is the size of training data image, and SVM classifier predicted whether the image is a car or not. The image below is an example of the sliding window search.
 
-* Sliding window search image
+<p align="center">
+  <img src="./output_images/sliding_windows.png" width="600">
+</p>
 
 After the search, a heat map was generated to combine overlapped search result into a single box. Windows were marked on the heat map and threshold value was applied to reduce false positive. Here is an example of the heat map.
 
-* Reduce false positive
+<p align="center">
+  <img src="./output_images/heat_map.png" width="600">
+</p>
 
-* Sliding window search result
+Considering the video, in which the flow of images is always continuous, another skill can be applied to reduce false positive. Found windows from the previous frame were added as a source to search cars in the current frame, which can enable higher heat map threshold to be used.
 
 
 Result video
 ---
 
+Here are the result videos using the vehicle detection pipeline. In the second video, false positive reduction using the windows of previous frame was applied.
+
+* [Project video 1](https://youtu.be/br-fN8EgXPk)
+
+* [Project video 2 (False positive reduction)](https://youtu.be/br-fN8EgXPk)
 
 
 Discussion
