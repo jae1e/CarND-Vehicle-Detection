@@ -19,10 +19,16 @@ Before extracting HOG features, I converted image channel from RGB to YCrCb whic
 Sliding window search
 ---
 
+* Window construction
+
+* Heat map
+
+* Reduce false positive
+
+* Sliding window search result
 
 
-
-Result
+Result video
 ---
 
 
