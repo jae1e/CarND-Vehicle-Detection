@@ -1,7 +1,7 @@
 # Vehicle Detection
 
 <p align="center">
-  <img src="./output_images/sdc-vd.gif" width="600">
+  <img src="./output_images/main.png" width="600">
 </p>
 
 The goals / steps of this project are the following:
